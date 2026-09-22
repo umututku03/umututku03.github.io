@@ -1,7 +1,7 @@
-import { profile } from './profile.js?v=20260922-1';
-import { icon, appIcon } from './icons.js?v=20260922-1';
-import { gameApps, mountGame } from './games.js?v=20260922-1';
-import { initSystemStatus } from './system-status.js?v=20260922-1';
+import { profile } from './profile.js?v=20260922-2';
+import { icon, appIcon } from './icons.js?v=20260922-2';
+import { gameApps, mountGame } from './games.js?v=20260922-2';
+import { initSystemStatus } from './system-status.js?v=20260922-2';
 
 const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
@@ -140,7 +140,7 @@ function homeContent() {
 }
 
 function aboutContent() {
-  return `<article class="page-content"><div class="eyebrow">ABOUT ME</div><div class="about-heading"><div class="avatar large">u<span></span></div><div><h2>${escape(profile.name)}</h2><p class="orange-text">${escape(profile.role)}</p></div></div><div class="about-note"><span class="note-label">about.txt</span><p>${escape(profile.bio)}</p></div><h3>Education</h3><div class="cv-entry"><div class="cv-entry-heading"><strong>${escape(profile.education.institution)}</strong><span>${escape(profile.education.dates)}</span></div><p>${escape(profile.education.degree)} · ${escape(profile.education.program)}</p><p>${escape(profile.education.distinction)}</p><p class="muted">${escape(profile.education.coursework)}</p></div><h3>Things I work with</h3>${profile.skillGroups.map(group => `<div class="cv-skill-group"><strong>${escape(group.name)}</strong><div class="skill-tags">${group.items.map(item => `<span>${escape(item)}</span>`).join('')}</div></div>`).join('')}<a class="secondary-button" href="${escape(profile.resume)}" download="Utku_Egemen_Umut_Resume.pdf">${icon('file')} Download résumé</a></article>`;
+  return `<article class="page-content"><div class="eyebrow">ABOUT ME</div><div class="about-heading"><div class="avatar large">u<span></span></div><div><h2>${escape(profile.name)}</h2><p class="orange-text">${escape(profile.role)}</p></div></div><div class="about-note"><span class="note-label">about.txt</span><p>${escape(profile.bio)}</p></div></article>`;
 }
 
 function projectsContent() {
