@@ -7,6 +7,15 @@ const paths = {
   memory: '<rect x="3" y="6" width="10" height="15" rx="2"/><rect x="11" y="3" width="10" height="15" rx="2"/><path d="m16 7 1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/>',
   github: '<path d="M9 20c-5 1-5-3-7-3m14 5v-4c0-1-.3-2-1-2.5 4-.5 7-2 7-6a5 5 0 0 0-1.5-3.5c.3-1 .3-2-.2-3-2 0-3.5 1-4.3 1.5a15 15 0 0 0-8 0C7.2 4 5.7 3 3.7 3c-.5 1-.5 2-.2 3A5 5 0 0 0 2 9.5c0 4 3 5.5 7 6-.7.5-1 1.5-1 2.5v4"/>',
   linkedin: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m0-10v.01M11 17v-7m0 3a3 3 0 0 1 6 0v4"/>',
+  layers: '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/>',
+  python: '<path d="M12 3c-5 0-5 2-5 5v2h7v1H5c-2 0-3 2-3 5s1 5 4 5h2v-3c0-2 1-3 3-3h5c2 0 3-2 3-4V8c0-3-2-5-7-5Z"/><path d="M9 6h.01M15 18h.01"/>',
+  memoryviz: '<path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 3l-4 18"/>',
+  agent: '<path d="M12 3 4 7v5c0 5 3 8 8 10 5-2 8-5 8-10V7l-8-4Z"/><path d="M8 12h8m-4-4v8"/>',
+  model: '<circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="m7 7 3 3m7-3-3 3m-7 7 3-3m7 3-3-3"/>',
+  chart: '<path d="M4 19V5m0 14h17M7 15l4-4 3 2 6-7"/><path d="M16 6h4v4"/>',
+  web: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01M7 13h5m-5 3h9"/>',
+  browser: '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 8h18M7 5.5h.01M10 5.5h.01M7 12h10m-10 4h7"/>',
+  music: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
 };
 // Yaru assets: © Yaru contributors, CC BY-SA 4.0. See public/yaru/ATTRIBUTION.md.
 const symbolic = new Set(['home', 'user', 'folder', 'terminal', 'mail', 'file', 'settings', 'grid', 'search', 'arrow', 'back', 'external', 'phone', 'wifi', 'volume', 'battery', 'chevron', 'close', 'minimize', 'maximize', 'check', 'copy', 'sun', 'moon', 'heart']);

@@ -144,6 +144,45 @@ h2 { font-weight: 500; letter-spacing: -.5px; }
 [data-theme=dark] .sidebar-link.selected { color: #fff; }
 [data-theme=dark] .avatar { background: #4a4a4a; color: #eee; }
 
+/* Portfolio résumé and linked project cards */
+.cv-content { max-width: 900px; }
+.cv-title-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin: 8px 0 28px; }
+.cv-title-row .muted { margin: 5px 0 0; }
+.cv-title-row .primary-button { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.cv-title-row .primary-button .icon { width: 15px; height: 15px; }
+.cv-section { margin: 25px 0; }
+.cv-section>h3,.page-content>h3 { padding-bottom: 9px; margin-bottom: 14px; border-bottom: 1px solid var(--border); font-size: 17px; font-weight: 500; }
+.cv-entry { margin: 0 0 19px; }
+.cv-entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.cv-entry-heading strong { font-size: 14px; font-weight: 500; }
+.cv-entry-heading span { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.cv-entry>p,.cv-entry li,.cv-skill-group>p { font-size: 13px; line-height: 1.65; }
+.cv-entry>.muted { margin: 7px 0; }
+.cv-entry ul,.cv-section>ul { padding-left: 20px; margin: 8px 0 0; }
+.cv-entry li,.cv-section>ul li { padding: 2px 0; }
+.cv-organization { color: var(--muted); }
+.cv-skill-group { margin: 13px 0; }
+.cv-skill-group>strong { font-size: 12px; font-weight: 500; }
+.cv-skill-group .skill-tags { margin: 7px 0 0; }
+.project-list { margin-bottom: 20px; }
+.project-card { align-items: flex-start; color: var(--text); background: var(--surface); transition: border-color .15s, background .15s; }
+a.project-card:hover { border-color: var(--orange); background: var(--surface-soft); }
+.project-icon { width: 44px; height: 44px; padding: 10px; color: var(--orange); background: var(--selection); border-radius: 8px; }
+.project-card>div { flex: 1; min-width: 0; }
+.project-card h3 { font-weight: 500; margin: 2px 0 6px; }
+.project-card>.icon:last-child { width: 14px; height: 14px; color: var(--muted); }
+.project-card .skill-tags { margin: 10px 0 0; }
+.project-card .skill-tags span { padding: 4px 7px; }
+.cv-entry+.cv-entry { padding-top: 2px; }
+@media(max-width:700px) {
+  .cv-title-row { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .cv-entry-heading { align-items: flex-start; flex-direction: column; gap: 2px; }
+  .project-card { gap: 11px; padding: 12px; }
+  .project-icon { width: 38px; height: 38px; padding: 9px; }
+  .project-card p { font-size: 11px; }
+  .project-card .skill-tags span { font-size: 9px; }
+}
+
 @media(max-width:1100px) {
   .home-content.yaru-welcome { padding: 29px 28px 0; }
   .welcome-intro { gap: 15px; }
