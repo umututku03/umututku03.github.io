@@ -1,0 +1,209 @@
+/* Original web styling based on the Yaru GTK palette. Official icon credits:
+   /public/yaru/ATTRIBUTION.md. No GTK or GNOME Shell code is bundled. */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  --orange: #e95420;
+  --surface: #fff;
+  --surface-soft: #fafafa;
+  --sidebar: #f7f7f7;
+  --border: #dedede;
+  --text: #3d3d3d;
+  --muted: #666;
+  --titlebar: #fafafa;
+  --selection: #e9542026;
+}
+[data-theme=dark] {
+  --surface: #272727;
+  --surface-soft: #303030;
+  --sidebar: #2b2b2b;
+  --border: #424242;
+  --text: #f7f7f7;
+  --muted: #b2b2b2;
+  --titlebar: #303030;
+  --selection: #e954203d;
+}
+.yaru-symbolic {
+  display: inline-block;
+  background: currentColor;
+  mask: var(--symbol) center / contain no-repeat;
+  -webkit-mask: var(--symbol) center / contain no-repeat;
+}
+img.yaru-app-icon { object-fit: contain; filter: none; border: 0; border-radius: 0; background: none; box-shadow: none; }
+.topbar { background: #1d1d1d; color: #fff; font-size: 13px; }
+.topbar-button { border-radius: 0; }
+.activities-button { font-size: 13px; }
+.activities-mark { display: none; }
+.clock-button { font-size: 13px; }
+.active-app { font-size: 12px; }
+.system-button .icon { width: 16px; height: 16px; }
+.dock { background: #1b1b1bbf; border-right-color: #0003; gap: 7px; padding-top: 13px; }
+.dock-item { border-radius: 5px; }
+.dock-item .app-icon { width: 48px; height: 48px; }
+.dock-item.active { background: #ffffff20; }
+.dock-item.active:before { height: 5px; width: 5px; top: 26px; border-radius: 50%; }
+.dock-tooltip { background: #333; font-family: 'Ubuntu', sans-serif; }
+.desktop { background: radial-gradient(ellipse at 8% 110%, #e95420 0%, transparent 53%), radial-gradient(ellipse at 95% 60%, #77216f 0%, transparent 70%), linear-gradient(125deg, #2c001e, #5e2750 70%, #77216f); }
+.wallpaper-art { opacity: .2; }
+.desktop-shortcut { font-family: 'Ubuntu', sans-serif; }
+.desktop-shortcut .app-icon { width: 48px; height: 48px; }
+.desktop-shortcut span:not(.app-icon) { font-size: 13px; }
+.desktop-signature { display: none; }
+.workspace-indicator { opacity: .65; }
+.window { border-radius: 9px 9px 5px 5px; border-color: #0005; }
+.window-titlebar { height: 47px; min-height: 47px; background: linear-gradient(var(--titlebar), var(--sidebar)); border-bottom-color: var(--border); }
+.window-title { font-size: 13px; font-weight: 500; }
+.window-title-icon { color: var(--text); }
+.window-controls { gap: 9px; }
+.window-controls button { background: #80808018; width: 25px; height: 25px; padding: 4px; }
+.window-controls button:hover { background: #80808030; }
+.window-controls .close-control { background: #e95420; }
+.window-controls .icon { width: 16px; height: 16px; }
+.window:not(.focused) .window-titlebar { color: var(--muted); }
+.sidebar { width: 190px; padding: 24px 9px 0; }
+.sidebar-profile { padding: 0 11px; margin-bottom: 26px; gap: 12px; }
+.avatar { background: #dedede; color: #5d5d5d; border-radius: 50%; font-family: 'Ubuntu', sans-serif; }
+.sidebar-profile strong { font-size: 15px; font-weight: 500; }
+.sidebar-profile>div>span { font-size: 11px; color: var(--muted); }
+.sidebar-label { letter-spacing: 0; text-transform: none; font-size: 12px; font-weight: 500; color: var(--muted); margin: 0 11px 9px; }
+.sidebar nav { gap: 3px; }
+.sidebar-link { font-size: 13px; color: var(--text); padding-inline: 11px; gap: 12px; height: 39px; border-radius: 5px; }
+.sidebar-link .icon { width: 16px; height: 16px; }
+.sidebar-link.selected { color: var(--text); background: var(--selection); font-weight: 500; }
+.sidebar-link.selected>i { display: none; }
+.sidebar-link:hover { background: #80808014; }
+.sidebar-link.selected:hover { background: var(--selection); }
+.sidebar-bottom>a { color: var(--text); padding: 11px; font-size: 12px; }
+.sidebar-version { font-size: 10px; color: var(--muted); padding-block: 15px; }
+.home-content.yaru-welcome { padding: 36px 38px 0; display: flex; flex-direction: column; }
+.welcome-intro { display: flex; align-items: center; gap: 21px; margin-bottom: 20px; }
+.welcome-intro>.app-icon { width: 94px; height: 94px; flex-shrink: 0; }
+.welcome-intro h1 { font-family: 'Ubuntu', sans-serif; font-size: 31px; letter-spacing: -.7px; font-weight: 500; line-height: 1.25; margin: 0 0 7px; }
+.welcome-intro .hello-label { font-size: 14px; color: var(--muted); margin-bottom: 7px; }
+.welcome-role { font-size: 15px; color: var(--muted); line-height: 1.5; }
+.welcome-description { color: var(--muted); font-size: 14px; line-height: 1.65; margin-bottom: 18px; }
+.primary-button,.secondary-button { font-size: 13px; font-family: 'Ubuntu', sans-serif; padding: 9px 17px; border-radius: 5px; min-height: 36px; font-weight: 500; }
+.primary-button { border: 1px solid #c34113; box-shadow: inset 0 1px 0 #ffffff20; }
+.secondary-button { background: linear-gradient(var(--surface),var(--surface-soft)); border-color: var(--border); box-shadow: 0 1px 2px #0000000a; }
+.welcome-about { align-self: flex-start; margin-bottom: 29px; }
+.welcome-section-title { font-size: 14px; font-weight: 500; margin-bottom: 11px; }
+.home-actions { border: 1px solid var(--border); border-radius: 7px; background: var(--surface-soft); overflow: hidden; margin-bottom: 26px; }
+.home-action { display: flex; align-items: center; gap: 15px; width: 100%; min-height: 67px; text-align: left; padding: 10px 16px; }
+.home-action+.home-action { border-top: 1px solid var(--border); }
+.home-action:hover { background: #8080800c; }
+.home-action>.app-icon { width: 40px; height: 40px; }
+.home-action>span:not(.icon) { display: flex; flex-direction: column; gap: 5px; flex: 1; }
+.home-action strong { font-size: 14px; font-weight: 500; }
+.home-action small { font-size: 12px; color: var(--muted); }
+.home-action>.icon { width: 16px; height: 16px; color: var(--muted); }
+.home-footer { font-size: 10px; color: var(--muted); margin-top: auto; padding: 17px 0; }
+.home-footer a { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; color: var(--muted); }
+.home-footer a:hover { color: var(--orange); }
+.home-footer a>.icon { width: 12px; height: 12px; }
+.eyebrow { letter-spacing: 0; font-size: 12px; color: var(--muted); font-weight: 400; text-transform: lowercase; }
+.eyebrow::first-letter { text-transform: uppercase; }
+h2 { font-weight: 500; letter-spacing: -.5px; }
+.page-content>h2 { font-size: 28px; }
+.muted { font-size: 14px; }
+.contact-row { background: var(--surface-soft); border-radius: 6px; }
+.contact-symbol { border: 0; color: var(--text); background: none; }
+.contact-row>a>span { font-size: 11px; }
+.contact-row strong { font-size: 13px; font-weight: 400; }
+.contact-row>.icon { color: var(--muted); }
+.page-footnote,.settings-caption { font-size: 11px; color: var(--muted); }
+.settings-caption a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.files-sidebar { width: 175px; }
+.files-toolbar { height: 49px; background: var(--surface-soft); }
+.breadcrumbs { border: 1px solid var(--border); border-radius: 5px; background: var(--surface); padding: 6px 10px; }
+.file-item>span:not(.app-icon) { font-size: 13px; }
+.files-status { font-size: 11px; }
+.window-terminal .window-titlebar { background: #303030; border-bottom-color: #1d1d1d; color: #f7f7f7; }
+.terminal-screen { background: #300a24; font-family: 'Ubuntu Mono', monospace; font-size: 15px; }
+.terminal-banner { color: #fff; font-weight: 400; }
+.terminal-banner span { font-size: 13px; }
+.terminal-form label { font-size: 15px; }
+.terminal-dim { font-size: 12px; }
+.terminal-user { color: #8ae234; }
+.terminal-path { color: #729fcf; }
+.popover { background: #333; color: #f7f7f7; border-color: #ffffff15; border-radius: 10px; }
+.activities { background: #242424ed; }
+.launcher-content { font-family: 'Ubuntu',sans-serif; }
+.launcher-app { border-radius: 8px; }
+.launcher-app strong { font-size: 14px; }
+.launcher-app>span:not(.app-icon) { font-size: 11px; }
+.app-search { background: #3d3d3d; border-color: #5d5d5d; }
+.toast { background: #333; font-family: 'Ubuntu', sans-serif; }
+.boot-emblem { width: 96px; height: 96px; margin-bottom: 20px; }
+.boot-emblem img { width: 100%; height: 100%; }
+.boot-name { font-family: 'Ubuntu',sans-serif; }
+.light-preview { background: #fff; }.light-preview i { background: #f0f0f0; }
+.dark-preview { background: #272727; }.dark-preview i { background: #303030; }
+.swatch-ubuntu { background: linear-gradient(35deg,#e95420,#5e2750,#2c001e); }
+[data-theme=dark] .sidebar-link { color: var(--text); }
+[data-theme=dark] .sidebar-link.selected { color: #fff; }
+[data-theme=dark] .avatar { background: #4a4a4a; color: #eee; }
+
+@media(max-width:1100px) {
+  .home-content.yaru-welcome { padding: 29px 28px 0; }
+  .welcome-intro { gap: 15px; }
+  .welcome-intro>.app-icon { width: 78px; height: 78px; }
+  .welcome-intro h1 { font-size: 27px; }
+  .sidebar { width: 175px; }
+}
+@media(max-width:850px) and (min-width:701px) {
+  .sidebar { width: 155px; }
+  .sidebar-link { font-size: 12px; }
+  .welcome-intro h1 { font-size: 23px; }
+  .welcome-intro>.app-icon { width: 60px; height: 60px; }
+  .home-content.yaru-welcome { padding-inline: 24px; }
+  .home-footer>a { display: none; }
+}
+@media(max-width:700px) {
+  .activities-button,.clock-button { font-size: 11px; }
+  .dock { gap: 2px; padding-top: 7px; border-radius: 13px; background: #202020ed; }
+  .dock-item .app-icon { width: 39px; height: 39px; }
+  .dock-item.active:before { top: auto; bottom: -4px; width: 3px; height: 3px; }
+  .window-titlebar { height: 43px; min-height: 43px; }
+  .window-title { font-size: 11px; max-width: 55%; }
+  .window-controls { gap: 5px; }
+  .window-controls button { width: 23px; height: 23px; }
+  .sidebar { width: 100%; padding: 0; }
+  .sidebar-link { font-size: 11px; gap: 5px; height: 37px; padding: 0 7px; }
+  .sidebar-link .icon { width: 14px; height: 14px; }
+  .home-content.yaru-welcome { padding: 27px 22px 0; }
+  .welcome-intro { flex-direction: column; text-align: center; gap: 12px; margin-bottom: 18px; }
+  .welcome-intro>.app-icon { width: 75px; height: 75px; }
+  .welcome-intro h1 { font-size: 25px; max-width: none; letter-spacing: -.5px; }
+  .welcome-intro .hello-label { font-size: 12px; }
+  .welcome-role { font-size: 14px; }
+  .welcome-description { font-size: 12px; text-align: center; }
+  .welcome-about { align-self: center; font-size: 12px; margin-bottom: 27px; }
+  .welcome-section-title { font-size: 13px; }
+  .home-action { padding: 10px 11px; gap: 10px; min-height: 65px; }
+  .home-action>.app-icon { width: 36px; height: 36px; }
+  .home-action strong { font-size: 12px; }
+  .home-action small { font-size: 10px; line-height: 1.5; }
+  .home-action>.icon { width: 14px; height: 14px; }
+  .home-footer { min-height: 46px; padding: 15px 0; }
+  .home-footer>a { display: none; }
+  .files-sidebar { width: 112px; }
+  .file-item>span:not(.app-icon) { font-size: 11px; }
+  .contact-row strong { font-size: 11px; }
+  .contact-row>a>span { font-size: 10px; }
+  .page-content>h2 { font-size: 25px; }
+  .page-content>.eyebrow { font-size: 11px; }
+  .terminal-screen { font-size: 13px; }
+  .terminal-form label { font-size: 12px; }
+  .terminal-banner span { font-size: 11px; }
+  .terminal-dim { font-size: 10px; }
+  .launcher-app strong { font-size: 12px; }
+  .launcher-app>span:not(.app-icon) { font-size: 9px; }
+}
+@media(max-width:380px) {
+  .home-content.yaru-welcome { padding-inline: 18px; }
+  .welcome-intro h1 { font-size: 23px; }
+  .sidebar-link { padding-inline: 5px; font-size: 10px; }
+  .contact-row strong { font-size: 10px; }
+  .dock-item .app-icon { width: 36px; height: 36px; }
+}

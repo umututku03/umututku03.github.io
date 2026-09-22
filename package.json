@@ -1,0 +1,13 @@
+{
+  "name": "personal-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/app.js && node --check src/system-status.js && node --check src/games.js && node --check src/game-logic.js && node --check src/icons.js && node --check src/profile.js && node --check scripts/server.mjs && node --check scripts/build.mjs"
+  }
+}

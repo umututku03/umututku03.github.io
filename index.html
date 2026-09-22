@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#24182b" />
+    <meta name="description" content="Utku Egemen Umut · ingénieur. A personal website with a desktop state of mind. Take a look around and say hello." />
+    <title>Utku Egemen Umut · Personal Desktop</title>
+    <link rel="icon" type="image/png" href="/public/yaru/icons/welcome.png" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/yaru.css" />
+    <link rel="stylesheet" href="/src/games.css" />
+    <link rel="stylesheet" href="/src/system-status.css" />
+    <script type="module" src="/src/app.js"></script>
+  </head>
+  <body>
+    <section id="boot" class="boot-screen" aria-label="Starting your personal desktop">
+      <div class="boot-topline"><span><i></i> PERSONAL OS</span><span>EST. 2026</span></div>
+      <div class="boot-center">
+        <div class="boot-emblem" aria-hidden="true"><img src="/public/yaru/icons/welcome.png" alt="" width="96" height="96" /></div>
+        <h1 class="boot-name">utku<span>.</span></h1>
+        <p class="boot-subtitle">a little corner of the internet.</p>
+        <div class="boot-progress" aria-hidden="true"><span></span></div>
+        <p id="boot-status" class="boot-status" role="status">Waking up the desktop…</p>
+      </div>
+      <div class="boot-bottomline"><span>Utku Egemen Umut <i>/</i> ingénieur</span><button id="skip-boot">Skip intro <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <div id="desktop" class="desktop">
+      <div class="wallpaper-art" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9a184"/><stop offset="1" stop-color="#bf769c"/></linearGradient></defs><g fill="none" stroke="url(#line)" stroke-width="1.2"><path d="M730 810 948 271 1163 177 1320 389 1245 690 1065 792 948 271 1002 576 1163 177 1245 690 1002 576 1065 792 730 810 1002 576 1320 389 948 271"/><path d="m1163 177 1346 54M1320 389l206-101M1245 690l254 133M730 810l-175 143M948 271 882 19M1065 792l29 173"/><path d="m954 593 48-17 67 32-61 26zM1185 451l46-24-4 59-42-35M1087 690l60-20-50 53z"/></g><circle cx="1140" cy="478" r="342" fill="none" stroke="#f8baad" stroke-opacity=".075"/></svg>
+      </div>
+      <header class="topbar">
+        <button id="activities-button" class="topbar-button activities-button" title="Show applications"><span class="activities-mark"><i></i><i></i></span> Activities</button>
+        <div id="active-app" class="active-app"></div>
+        <button id="clock-button" class="topbar-button clock-button" aria-expanded="false"></button>
+        <button id="system-button" class="topbar-button system-button" aria-label="System settings" aria-expanded="false"></button>
+      </header>
+      <nav id="dock" class="dock" aria-label="Applications"></nav>
+      <div class="desktop-shortcuts" id="desktop-shortcuts"></div>
+      <main id="windows" aria-label="Desktop windows"></main>
+      <div class="desktop-signature"><span class="signature-logo">◉</span><div>utku<span>PERSONAL DESKTOP</span></div></div>
+      <div class="workspace-indicator"><span></span> 01 <i>/</i> Desktop</div>
+      <div id="calendar" class="popover calendar" hidden></div>
+      <div id="system-menu" class="popover system-menu" hidden></div>
+      <section id="activities" class="activities" aria-label="Application launcher" hidden></section>
+      <div id="toast" class="toast" role="status"></div>
+    </div>
+  </body>
+</html>

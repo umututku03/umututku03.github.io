@@ -1,0 +1,30 @@
+.system-button{gap:12px}
+.panel-status{display:inline-flex;align-items:center;gap:5px;position:relative;height:100%;color:inherit;pointer-events:auto}
+.panel-status>.icon{width:16px!important;height:16px!important;display:inline-block!important}
+.panel-status .live-battery-icon{width:22px!important;height:17px!important;--battery-bolt:#1d1d1d}
+.panel-status.unavailable{color:#b4b4b4}
+.panel-status.offline{color:#e99d8a}
+.panel-status.charging{color:#aed49c}
+.panel-status.low{color:#f49d85}
+.battery-percentage{font-size:11px;font-variant-numeric:tabular-nums;line-height:1}
+.unknown-mark{font-size:8px;align-self:flex-start;margin-top:5px;margin-left:-4px;color:#c6c6c6}
+.system-menu{width:330px;max-width:calc(100vw - 20px)}
+.device-status{border-bottom:1px solid #ffffff18;margin:0 0 9px;padding-bottom:8px}
+.device-status-row{display:flex;gap:13px;padding:12px 7px;align-items:flex-start}
+.device-status-row>.icon{width:18px;height:18px;flex-shrink:0;margin-top:2px;color:#dedede}
+.device-status-row>.live-battery-icon{width:20px;--battery-bolt:#333}
+.device-status-row>div{flex:1;min-width:0}
+.device-status-label{display:flex;align-items:baseline;justify-content:space-between;gap:10px;font-size:11px}
+.device-status-label strong{font-weight:500;color:#f7f7f7}
+.device-status-label>span{font-size:10px;text-align:right;color:#d0d0d0}
+.device-status-row p{font-size:10px;color:#aaa;line-height:1.55;margin-top:5px}
+.device-status-row.low .device-status-label>span,.device-status-row.low>.icon{color:#f49d85}
+.device-status-row[data-state=offline] .device-status-label>span{color:#f49d85}
+@media(max-width:700px){
+  .system-button{gap:7px;padding-inline:10px}
+  .system-button>.icon:last-child{display:inline-block!important;width:10px;height:10px}
+  .panel-status>.icon{display:inline-block!important;width:14px!important;height:14px!important}
+  .panel-status .live-battery-icon{width:20px!important;height:15px!important}
+  .battery-percentage{font-size:10px}.unknown-mark{font-size:7px;margin-top:6px}
+}
+@media(max-width:380px){.sound-status{display:none}.system-button{gap:6px}}
