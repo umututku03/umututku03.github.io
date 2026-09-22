@@ -1,7 +1,7 @@
-import { profile } from './profile.js?v=20260922-2';
-import { icon, appIcon } from './icons.js?v=20260922-2';
-import { gameApps, mountGame } from './games.js?v=20260922-2';
-import { initSystemStatus } from './system-status.js?v=20260922-2';
+import { profile } from './profile.js?v=20260922-3';
+import { icon, appIcon } from './icons.js?v=20260922-3';
+import { gameApps, mountGame } from './games.js?v=20260922-3';
+import { initSystemStatus } from './system-status.js?v=20260922-3';
 
 const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
@@ -144,7 +144,7 @@ function aboutContent() {
 }
 
 function projectsContent() {
-  return `<article class="page-content"><div class="eyebrow">OPEN SOURCE & SIDE PROJECTS</div><h2>Projects</h2><p class="muted">A few things I've contributed to or built.</p><div class="project-list">${profile.projects.map(p => `<a class="project-card" href="${safeLink(p.url)}" target="_blank" rel="noopener noreferrer">${icon(p.icon, 'project-icon')}<div><h3>${escape(p.name)}</h3><p>${escape(p.summary)}</p><div class="skill-tags">${p.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div></div>${icon('external')}</a>`).join('')}</div></article>`;
+  return `<article class="page-content"><div class="eyebrow">OPEN SOURCE & SIDE PROJECTS</div><h2>Projects</h2><p class="muted">A few things I've contributed to or built.</p><div class="project-list">${profile.projects.map(p => `<div class="project-card">${icon(p.icon, 'project-icon')}<div><h3><a href="${safeLink(p.url)}" target="_blank" rel="noopener noreferrer">${escape(p.name)}</a></h3><p>${escape(p.summary)}</p>${p.repoLinks?.length ? `<nav class="project-repo-links" aria-label="${escape(p.name)} repositories">${p.repoLinks.map(link => `<a href="${safeLink(link.url)}" target="_blank" rel="noopener noreferrer">${escape(link.label)} ${icon('external')}</a>`).join('')}</nav>` : ''}<div class="skill-tags">${p.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div></div><a class="project-open" href="${safeLink(p.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${escape(p.name)} on GitHub">${icon('external')}</a></div>`).join('')}</div></article>`;
 }
 
 function contactContent() {

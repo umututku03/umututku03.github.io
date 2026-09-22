@@ -166,11 +166,17 @@ h2 { font-weight: 500; letter-spacing: -.5px; }
 .cv-skill-group .skill-tags { margin: 7px 0 0; }
 .project-list { margin-bottom: 20px; }
 .project-card { align-items: flex-start; color: var(--text); background: var(--surface); transition: border-color .15s, background .15s; }
-a.project-card:hover { border-color: var(--orange); background: var(--surface-soft); }
+.project-card:hover { border-color: var(--orange); background: var(--surface-soft); }
 .project-icon { width: 44px; height: 44px; padding: 10px; color: var(--orange); background: var(--selection); border-radius: 8px; }
 .project-card>div { flex: 1; min-width: 0; }
 .project-card h3 { font-weight: 500; margin: 2px 0 6px; }
-.project-card>.icon:last-child { width: 14px; height: 14px; color: var(--muted); }
+.project-card h3 a { color: inherit; }
+.project-card h3 a:hover, .project-repo-links a:hover { color: var(--orange); }
+.project-repo-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.project-repo-links a { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); font-size: 10px; }
+.project-repo-links .icon { width: 11px; height: 11px; }
+.project-card .project-open { display: flex; flex: 0 0 auto; }
+.project-card .project-open>.icon { width: 14px; height: 14px; color: var(--muted); }
 .project-card .skill-tags { margin: 10px 0 0; }
 .project-card .skill-tags span { padding: 4px 7px; }
 .cv-entry+.cv-entry { padding-top: 2px; }
