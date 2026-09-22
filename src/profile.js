@@ -68,6 +68,7 @@ export const profile = {
     { name: 'CSC309 Scriptorium', url: 'https://github.com/umututku03/CSC309-Scriptorium', summary: 'Web programming course project built with a team.', tags: ['Web development', 'CSC309'], icon: 'web' },
     { name: 'CSC309 Course Project', url: 'https://github.com/umututku03/CSC309-Course-Project', summary: 'A second web development project from CSC309.', tags: ['Web development', 'CSC309'], icon: 'browser' },
     { name: 'Music Java App', url: 'https://github.com/umututku03/music-java-app', summary: 'A music-focused application built in Java.', tags: ['Java', 'Application'], icon: 'music' },
+    { name: 'Witnsd', url: 'https://github.com/witnsd/witnsd', summary: 'A project around reacting to major world events and sharing your perspective.', tags: ['Mobile app', 'Product'], icon: 'web' },
   ],
   leadership: [
     'Lead Tutorial Teaching Assistant, CSC236 at the University of Toronto · two terms',
