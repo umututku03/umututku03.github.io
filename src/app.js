@@ -1,7 +1,7 @@
-import { profile } from './profile.js';
-import { icon, appIcon } from './icons.js';
-import { gameApps, mountGame } from './games.js';
-import { initSystemStatus } from './system-status.js';
+import { profile } from './profile.js?v=20260922-1';
+import { icon, appIcon } from './icons.js?v=20260922-1';
+import { gameApps, mountGame } from './games.js?v=20260922-1';
+import { initSystemStatus } from './system-status.js?v=20260922-1';
 
 const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
