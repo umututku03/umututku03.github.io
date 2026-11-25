@@ -6,7 +6,7 @@ import { renderPage } from '../src/page.js';
 const portIndex = process.argv.indexOf('--port');
 const port = Number(portIndex >= 0 ? process.argv[portIndex + 1] : process.env.PORT || 5173);
 const root = process.cwd();
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.pdf': 'application/pdf', '.json': 'application/json', '.txt': 'text/plain' };
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.md': 'text/plain; charset=utf-8', '.pdf': 'application/pdf', '.json': 'application/json', '.txt': 'text/plain' };
 http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://localhost');

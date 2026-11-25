@@ -1,11 +1,16 @@
 export const profile = {
   name: 'Utku Egemen Umut',
   username: 'utku',
-  role: 'Computer science student at the University of Toronto',
+  role: 'Computer Science at the University of Toronto · Machine Learning & Systems',
   location: 'Toronto, Canada',
-  bio: 'Previously, I worked on applied machine learning at Cerebras Systems and on computer vision at York University and Koç University.',
-  intro: 'I’m a computer science student at the University of Toronto, pursuing a Computer Science Specialist and a Mathematics Minor. I expect to graduate in June 2027.',
-  interests: 'I’m interested in machine learning, particularly language models, reinforcement learning, and computer vision.',
+  intro: "I'm completing a Computer Science Specialist and Mathematics Minor at the University of Toronto. I'm interested in LLM reasoning, AI safety and alignment, computer vision, and the systems behind model training, evaluation, and inference. I  also follow research on blockchain and distributed systems.",
+  photo: '/public/profile.jpg',
+  news: [
+    { date: 'May 2025', text: 'Joined Cerebras Systems as an Applied Machine Learning Engineer.' },
+    { date: '2024', text: 'Received the Lassonde Undergraduate Research Award at York University.' },
+    { date: '2023–2024', text: 'Contributed to University of Toronto course tools through Students Developing Software (SDS).' },
+  ],
+  posts: [],
   education: {
     institution: 'University of Toronto',
     degree: 'Honours Bachelor of Science',
@@ -20,49 +25,17 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/utkuegemenumut',
   resume: '/public/resume.pdf',
   experience: [
-    {
-      role: 'Applied Machine Learning Engineer Intern · PEY',
-      organization: 'Cerebras Systems', location: 'Toronto, Canada', dates: 'May 2025 – Aug 2026',
-      summary: 'Worked on language-model evaluation, self-distillation, reinforcement learning, and sparse attention. Extended CePO to image and vision-language inputs.',
-      highlights: [
-        'Extended CePO to image and vision-language inputs; added LLM rating and verification tools.',
-        'Compared four distillation methods across difficulty-bucketed math and code-generation tasks and authored a white paper on failure modes.',
-        'Implemented OPSD and SDPO self-distillation in verl. A per-element forward-KL clipping change raised AIME24 Avg@12 from 48.6 to 53.3.',
-        'Integrated SkyRL and GEPA prompt optimization into Applied ML workflows, reporting a 10% improvement over GRPO with 35× fewer rollouts.',
-        'Ported the DSA sparse-attention stack to a single 24 GB A10 GPU.',
-      ],
-    },
-    {
-      role: 'Software Engineer', organization: 'Knowlecy Technologies', location: 'Toronto, Canada', dates: 'Jan 2025 – Apr 2025',
-      summary: 'Built Python and FastAPI services, SQL-backed APIs, and an event-driven notification service.',
-      highlights: [
-        'Built Python and FastAPI services with SQL-backed REST APIs for posts, comments, content discovery, and topic tags.',
-        'Developed an event-driven notification service using gRPC and RabbitMQ.',
-      ],
-    },
-    {
-      role: 'Computer Vision Researcher · LURA Research Award', organization: 'Computational Vision and Imaging Lab, York University', location: 'Toronto, Canada', dates: 'May 2024 – Aug 2024',
-      summary: 'Worked on scene selection and camera-motion-robust point tracking for 3D human pose estimation.',
-      highlights: [
-        'Built a scene-selection pipeline that achieved 91% accuracy across 1,000+ frames of televised footage.',
-        'Created camera-motion-robust 2D point tracking to provide context for 3D human pose estimation.',
-      ],
-    },
-    {
-      role: 'Undergraduate Researcher', organization: 'Autonomous Vision Group, KUIS AI Research Centre', location: 'Istanbul, Turkey', dates: 'Jun 2023 – Sep 2023',
-      summary: 'Adapted a multi-agent trajectory-prediction pipeline to run on a Linux high-performance computing cluster.',
-      highlights: ['Reworked a multi-agent trajectory-prediction pipeline for a Linux HPC cluster, cutting experiment runtime by 30%.'],
-    },
-    {
-      role: 'Machine Learning Engineer Intern', organization: 'TAZI AI Systems', location: 'Istanbul, Turkey', dates: 'May 2023 – Aug 2023',
-      summary: 'Developed churn-prediction models for the Adaptive AutoML platform.',
-      highlights: ['Shipped end-to-end churn-prediction models for the Adaptive AutoML platform, achieving 89% accuracy.'],
-    },
+    { role: 'Applied Machine Learning Engineer', organization: 'Cerebras Systems', url: 'https://cerebras.ai/', location: 'Toronto', dates: 'May 2025 – August 2026', summary: 'Worked on LLM reasoning, post-training, and evaluation infrastructure.' },
+    { role: 'Software Engineer', organization: 'Knowlecy Technologies', location: 'Toronto', dates: 'January – April 2025' },
+    { role: 'Computer Vision Researcher', organization: 'Computational Vision and Imaging Lab, York University', url: 'https://github.com/YorkUCVIL', location: 'Toronto', dates: 'May – August 2024', summary: 'Recipient of the Lassonde Undergraduate Research Award.' },
+    { role: 'Undergraduate Researcher', organization: 'Autonomous Vision Group, Koç University KUIS AI Research Centre', dates: 'June – September 2023' },
+    { role: 'Machine Learning Engineer Intern', organization: 'TAZI AI Systems', dates: 'May – August 2023' },
   ],
   openSource: [
-    { name: 'MarkUs', summary: 'Contributed to a Ruby on Rails, React, and PostgreSQL grading platform used by 5,000+ students.', tags: ['Ruby on Rails', 'React', 'PostgreSQL'] },
-    { name: 'PythonTA', summary: 'Contributed Python static-analysis tooling used in courses with 5,000+ students annually.', tags: ['Python', 'Pylint', 'Astroid'] },
-    { name: 'MemoryViz', summary: 'Helped turn an early prototype into a maintainable learning tool used by thousands.', tags: ['JavaScript', 'Node.js'] },
+    { name: 'LLVM', url: 'https://github.com/llvm/llvm-project', summary: 'Contributions to compiler infrastructure and developer tools.', pullRequests: 'https://github.com/llvm/llvm-project/pulls?q=is%3Apr+author%3Aumututku03' },
+    { name: 'MarkUs', url: 'https://github.com/MarkUsProject/Markus', summary: 'Contributed to a Ruby on Rails, React, and PostgreSQL grading platform used by 5,000+ students.', pullRequests: 'https://github.com/MarkUsProject/Markus/pulls?q=is%3Apr+author%3Aumututku03' },
+    { name: 'PythonTA', url: 'https://github.com/pyta-uoft/pyta', summary: 'Contributed to Python static-analysis tools used by 5,000+ students annually.', pullRequests: 'https://github.com/pyta-uoft/pyta/pulls?q=is%3Apr+author%3Aumututku03' },
+    { name: 'MemoryViz', url: 'https://github.com/david-yz-liu/memory-viz', summary: 'Helped develop a JavaScript/Node.js prototype into a maintainable teaching tool used by thousands.', pullRequests: 'https://github.com/david-yz-liu/memory-viz/pulls?q=is%3Apr+author%3Aumututku03' },
   ],
   projects: [
     { name: 'MarkUs', url: 'https://github.com/MarkUsProject/Markus', summary: 'Contributed to an open-source assignment and grading platform built with Ruby on Rails, React, and PostgreSQL.', tags: ['Ruby on Rails', 'React', 'PostgreSQL', 'RSpec'], icon: 'layers' },
@@ -75,14 +48,14 @@ export const profile = {
     { name: 'Witnsd', url: 'https://github.com/witnsd/witnsd', summary: 'Cross-platform social app for reacting to current events, sharing takes and predictions, and following community conversations; backed by Supabase and scheduled event-processing functions.', tags: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'PostgreSQL', 'Edge Functions'], icon: 'web' },
   ],
   leadership: [
-    'Lead Tutorial Teaching Assistant, CSC236 at the University of Toronto · two terms',
-    'Machine Learning Projects Director, UTMIST · Sep 2024 – present',
+    { role: 'Lead Tutorial Teaching Assistant, CSC236', description: 'Two terms.' },
+    { role: 'Machine Learning Projects Director, UTMIST', description: 'Since September 2024.' },
   ],
   skillGroups: [
     { name: 'Languages', items: ['Python', 'C++', 'C', 'SQL', 'Shell', 'Java', 'JavaScript', 'Haskell'] },
-    { name: 'Machine learning', items: ['PyTorch', 'FlexAttention', 'Tensor parallelism', 'Distributed training', 'vLLM', 'verl', 'Hugging Face Transformers', 'Inspect', 'scikit-learn'] },
-    { name: 'Backend & data', items: ['FastAPI', 'gRPC', 'RabbitMQ', 'PostgreSQL'] },
-    { name: 'Systems & tools', items: ['Linux', 'Docker', 'Slurm / HPC', 'GPU programming', 'Git', 'CI / CD'] },
+    { name: 'Machine learning', items: ['PyTorch', 'Hugging Face Transformers', 'vLLM', 'verl', 'FlexAttention', 'Inspect', 'scikit-learn'] },
+    { name: 'ML systems', items: ['Distributed training', 'tensor parallelism', 'GPU programming', 'Slurm/HPC'] },
+    { name: 'Backend and infrastructure', items: ['FastAPI', 'gRPC', 'RabbitMQ', 'PostgreSQL', 'Linux', 'Docker', 'Git', 'CI/CD'] },
   ],
   skills: [],
 };

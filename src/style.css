@@ -35,6 +35,18 @@ h3 { margin: 0; color: #333; font-size: 1rem; line-height: 1.6; font-weight: 600
 .introduction { margin-top: 24px; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 18px 0 0; padding: 0; list-style: none; }
 .contact-links a { display: inline-block; padding: 3px 0; }
+.profile-header { display: grid; grid-template-columns: minmax(0, 1fr) 160px; align-items: center; gap: 40px; margin-bottom: 36px; }
+.profile-photo { display: block; width: 160px; height: 160px; object-fit: cover; border-radius: 3px; }
+.readme-source { font-size: .875rem; margin-top: 12px; }
+.empty-note { color: #737373; }
+.news-list .dated-entry + .dated-entry { margin-top: 13px; }
+.news-list .entry-date { padding-top: 2px; }
+.contribution-list { padding-left: 20px; margin: 0; }
+.contribution-list li + li { margin-top: 14px; }
+.sds-context { margin: 20px 0 14px; }
+.tools-list p + p { margin-top: 12px; }
+.activity { margin-top: 24px; }
+.activity img { display: block; max-width: 100%; height: auto; margin-top: 14px; }
 
 .entry-list, .project-list { margin: 0; padding: 0; list-style: none; }
 .dated-entry { display: grid; grid-template-columns: 160px minmax(0, 1fr); column-gap: 22px; }
@@ -64,6 +76,8 @@ footer a { color: inherit; text-decoration: underline; }
   nav { gap: 5px 20px; }
   main { padding-top: 34px; }
   h1 { font-size: 2rem; }
+  .profile-header { grid-template-columns: minmax(0, 1fr) 120px; gap: 24px; align-items: start; }
+  .profile-photo { width: 120px; height: 120px; }
   .dated-entry { grid-template-columns: 135px minmax(0, 1fr); gap: 16px; }
 }
 
@@ -72,6 +86,9 @@ footer a { color: inherit; text-decoration: underline; }
   nav { gap: 3px 18px; }
   .site-name { font-size: .9375rem; }
   h1 { font-size: 1.875rem; letter-spacing: -.6px; }
+  .profile-header { grid-template-columns: minmax(0, 1fr) 88px; gap: 16px; }
+  .profile-photo { width: 88px; height: 88px; }
+  .profile-header .contact-links { gap: 4px 15px; margin-top: 13px; }
   .dated-entry { grid-template-columns: minmax(0, 1fr); gap: 3px; }
   .dated-entry + .dated-entry { margin-top: 26px; }
   .entry-date { font-size: .875rem; }

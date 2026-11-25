@@ -12,5 +12,8 @@ await Promise.all([
   copyFile('src/style.css', 'dist/src/style.css'),
   copyFile('public/favicon.svg', 'dist/public/favicon.svg'),
   copyFile('public/resume.pdf', 'dist/public/resume.pdf'),
+  copyFile('public/profile.jpg', 'dist/public/profile.jpg'),
+  copyFile('public/profile-readme.md', 'dist/public/profile-readme.md'),
+  copyFile('public/github-metrics.svg', 'dist/public/github-metrics.svg'),
 ]);
 console.log('Built static website in dist/');
