@@ -1,10 +1,11 @@
 export const profile = {
   name: 'Utku Egemen Umut',
   username: 'utku',
-  role: 'Computer science student · machine learning engineer',
+  role: 'Computer science student at the University of Toronto',
   location: 'Toronto, Canada',
-  bio: 'ingénieur',
-  intro: 'I build machine-learning systems and useful things that make their way out of the research lab and into the real world.',
+  bio: 'Previously, I worked on applied machine learning at Cerebras Systems and on computer vision at York University and Koç University.',
+  intro: 'I’m a computer science student at the University of Toronto, pursuing a Computer Science Specialist and a Mathematics Minor. I expect to graduate in June 2027.',
+  interests: 'I’m interested in machine learning, particularly language models, reinforcement learning, and computer vision.',
   education: {
     institution: 'University of Toronto',
     degree: 'Honours Bachelor of Science',
@@ -22,6 +23,7 @@ export const profile = {
     {
       role: 'Applied Machine Learning Engineer Intern · PEY',
       organization: 'Cerebras Systems', location: 'Toronto, Canada', dates: 'May 2025 – Aug 2026',
+      summary: 'Worked on language-model evaluation, self-distillation, reinforcement learning, and sparse attention. Extended CePO to image and vision-language inputs.',
       highlights: [
         'Extended CePO to image and vision-language inputs; added LLM rating and verification tools.',
         'Compared four distillation methods across difficulty-bucketed math and code-generation tasks and authored a white paper on failure modes.',
@@ -32,6 +34,7 @@ export const profile = {
     },
     {
       role: 'Software Engineer', organization: 'Knowlecy Technologies', location: 'Toronto, Canada', dates: 'Jan 2025 – Apr 2025',
+      summary: 'Built Python and FastAPI services, SQL-backed APIs, and an event-driven notification service.',
       highlights: [
         'Built Python and FastAPI services with SQL-backed REST APIs for posts, comments, content discovery, and topic tags.',
         'Developed an event-driven notification service using gRPC and RabbitMQ.',
@@ -39,6 +42,7 @@ export const profile = {
     },
     {
       role: 'Computer Vision Researcher · LURA Research Award', organization: 'Computational Vision and Imaging Lab, York University', location: 'Toronto, Canada', dates: 'May 2024 – Aug 2024',
+      summary: 'Worked on scene selection and camera-motion-robust point tracking for 3D human pose estimation.',
       highlights: [
         'Built a scene-selection pipeline that achieved 91% accuracy across 1,000+ frames of televised footage.',
         'Created camera-motion-robust 2D point tracking to provide context for 3D human pose estimation.',
@@ -46,10 +50,12 @@ export const profile = {
     },
     {
       role: 'Undergraduate Researcher', organization: 'Autonomous Vision Group, KUIS AI Research Centre', location: 'Istanbul, Turkey', dates: 'Jun 2023 – Sep 2023',
+      summary: 'Adapted a multi-agent trajectory-prediction pipeline to run on a Linux high-performance computing cluster.',
       highlights: ['Reworked a multi-agent trajectory-prediction pipeline for a Linux HPC cluster, cutting experiment runtime by 30%.'],
     },
     {
       role: 'Machine Learning Engineer Intern', organization: 'TAZI AI Systems', location: 'Istanbul, Turkey', dates: 'May 2023 – Aug 2023',
+      summary: 'Developed churn-prediction models for the Adaptive AutoML platform.',
       highlights: ['Shipped end-to-end churn-prediction models for the Adaptive AutoML platform, achieving 89% accuracy.'],
     },
   ],
@@ -59,9 +65,9 @@ export const profile = {
     { name: 'MemoryViz', summary: 'Helped turn an early prototype into a maintainable learning tool used by thousands.', tags: ['JavaScript', 'Node.js'] },
   ],
   projects: [
-    { name: 'MarkUs', url: 'https://github.com/MarkUsProject/Markus', summary: 'Open-source course platform for assignment submissions, rubric-based marking, annotations, and automated grading; I contributed to the codebase.', tags: ['Ruby on Rails', 'React', 'PostgreSQL', 'RSpec'], icon: 'layers' },
-    { name: 'PythonTA', url: 'https://github.com/pyta-uoft/pyta', summary: 'Educational Python analyzer combining Pylint, pycodestyle, mypy, and custom AST checks to give beginner-friendly code feedback.', tags: ['Python', 'Static analysis', 'Pylint', 'Astroid', 'mypy'], icon: 'python' },
-    { name: 'MemoryViz', url: 'https://github.com/david-yz-liu/memory-viz', summary: 'Creates hand-drawn-style SVG diagrams of Python frames and objects from structured memory data, with a Node.js CLI and browser demos.', tags: ['TypeScript', 'JavaScript', 'Node.js', 'SVG', 'Rough.js'], icon: 'memoryviz' },
+    { name: 'MarkUs', url: 'https://github.com/MarkUsProject/Markus', summary: 'Contributed to an open-source assignment and grading platform built with Ruby on Rails, React, and PostgreSQL.', tags: ['Ruby on Rails', 'React', 'PostgreSQL', 'RSpec'], icon: 'layers' },
+    { name: 'PythonTA', url: 'https://github.com/pyta-uoft/pyta', summary: 'Contributed to Python static-analysis tooling used in introductory programming courses.', tags: ['Python', 'Static analysis', 'Pylint', 'Astroid', 'mypy'], icon: 'python' },
+    { name: 'MemoryViz', url: 'https://github.com/david-yz-liu/memory-viz', summary: 'Helped develop a tool for visualizing Python frames and objects, with a Node.js CLI and browser demos.', tags: ['TypeScript', 'JavaScript', 'Node.js', 'SVG', 'Rough.js'], icon: 'memoryviz' },
     { name: 'Spartan Agent', url: 'https://github.com/umututku03/spartan-agent', summary: 'Ethereum-focused DeFi agent MVP with wallet import and detection, transfers, Uniswap V2 swaps, and Aave V3 supply and borrowing.', tags: ['TypeScript', 'ElizaOS', 'viem', 'Ethereum', 'Uniswap', 'Aave'], icon: 'agent' },
     { name: 'CSC311 Food Classification', url: 'https://github.com/umututku03/CSC311-ML-Challenge', repoLinks: [{ label: 'Challenge repo', url: 'https://github.com/umututku03/CSC311-ML-Challenge' }, { label: 'Submission repo', url: 'https://github.com/umututku03/CSC311-ML-Challenge-Submission' }], summary: 'End-to-end food classification project: engineers features from survey responses, compares models for pizza, shawarma, and sushi, and includes a submission-ready inference pipeline with extracted neural-network weights.', tags: ['Python', 'Pandas', 'NumPy', 'scikit-learn', 'PyTorch', 'Classification'], icon: 'model' },
     { name: 'CSC309 Scriptorium', url: 'https://github.com/umututku03/CSC309-Scriptorium', repoLinks: [{ label: 'Scriptorium repo', url: 'https://github.com/umututku03/CSC309-Scriptorium' }, { label: 'Course project repo', url: 'https://github.com/umututku03/CSC309-Course-Project' }], summary: 'Collaborative code-sharing platform with editable and forkable templates, multi-language execution, user accounts, and a community blog with nested comments, moderation reports, and ratings.', tags: ['Next.js', 'React', 'TypeScript', 'Prisma', 'SQLite', 'Tailwind CSS'], icon: 'web' },
